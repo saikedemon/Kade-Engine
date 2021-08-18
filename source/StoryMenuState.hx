@@ -33,7 +33,8 @@ class StoryMenuState extends MusicBeatState
 			['Pico', 'Philly Nice', "Blammed"],
 			['Satin Panties', "High", "Milf"],
 			['Cocoa', 'Eggnog', 'Winter Horrorland'],
-			['Senpai', 'Roses', 'Thorns']
+			['Senpai', 'Roses', 'Thorns'],
+			['Flowers', 'Bloom', 'Undefined']
 		];
 	}
 	var curDifficulty:Int = 1;
@@ -47,7 +48,8 @@ class StoryMenuState extends MusicBeatState
 		['pico', 'bf', 'gf'],
 		['mom', 'bf', 'gf'],
 		['parents-christmas', 'bf', 'gf'],
-		['senpai', 'bf', 'gf']
+		['senpai', 'bf', 'gf'],
+		['cecily', 'bf', 'gf']
 	];
 
 	var weekNames:Array<String> = CoolUtil.coolTextFile(Paths.txt('data/weekNames'));
@@ -71,11 +73,9 @@ class StoryMenuState extends MusicBeatState
 	function unlockWeeks():Array<Bool>
 	{
 		var weeks:Array<Bool> = [];
-		#if debug
 		for(i in 0...weekNames.length)
 			weeks.push(true);
 		return weeks;
-		#end
 		
 		weeks.push(true);
 
@@ -146,7 +146,10 @@ class StoryMenuState extends MusicBeatState
 			grpWeekText.add(weekThing);
 
 			weekThing.screenCenter(X);
-			weekThing.antialiasing = FlxG.save.data.antialiasing;
+			if(FlxG.save.data.antialiasing)
+				{
+					weekThing.antialiasing = true;
+				}
 			// weekThing.updateHitbox();
 
 			// Needs an offset thingie
@@ -158,7 +161,10 @@ class StoryMenuState extends MusicBeatState
 				lock.animation.addByPrefix('lock', 'lock');
 				lock.animation.play('lock');
 				lock.ID = i;
-				lock.antialiasing = FlxG.save.data.antialiasing;
+				if(FlxG.save.data.antialiasing)
+					{
+						lock.antialiasing = true;
+					}
 				grpLocks.add(lock);
 			}
 		}
@@ -369,7 +375,7 @@ class StoryMenuState extends MusicBeatState
 			PlayState.shits = 0;
 			PlayState.goods = 0;
 			PlayState.campaignMisses = 0;
-			PlayState.SONG = Song.conversionChecks(Song.loadFromJson(poop, PlayState.storyPlaylist[0]));
+			PlayState.SONG = Song.loadFromJson(poop, PlayState.storyPlaylist[0]);
 			PlayState.storyWeek = curWeek;
 			PlayState.campaignScore = 0;
 			new FlxTimer().start(1, function(tmr:FlxTimer)

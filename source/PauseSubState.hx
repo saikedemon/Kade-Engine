@@ -209,7 +209,6 @@ class PauseSubState extends MusicBeatSubstate
 		{
 			var daSelected:String = menuItems[curSelected];
 
-			
 			switch (daSelected)
 			{
 				case "Resume":
@@ -222,7 +221,6 @@ class PauseSubState extends MusicBeatSubstate
 						PlayState.instance.remove(PlayState.instance.videoSprite);
 						PlayState.instance.removedVideo = true;
 					}
-					PlayState.instance.clean();
 					FlxG.resetState();
 				case "Exit to menu":
 					PlayState.startTime = 0;
@@ -249,8 +247,6 @@ class PauseSubState extends MusicBeatSubstate
 					if (FlxG.save.data.fpsCap > 290)
 						(cast (Lib.current.getChildAt(0), Main)).setFPSCap(290);
 					
-					PlayState.instance.clean();
-
 					if (PlayState.isStoryMode)
 						FlxG.switchState(new StoryMenuState());
 					else
