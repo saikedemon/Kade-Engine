@@ -478,6 +478,12 @@ class PlayState extends MusicBeatState
 				dialogue = CoolUtil.coolTextFile(Paths.txt('data/roses/rosesDialogue'));
 			case 'thorns':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('data/thorns/thornsDialogue'));
+			case 'flowers':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('data/flowers/dialogue'));
+			case 'bloom':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('data/bloom/dialogue'));
+			case 'undefined':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('data/undefined/dialogue'));
 		}
 
 		// defaults if no stage was found in chart
@@ -834,6 +840,34 @@ class PlayState extends MusicBeatState
 							add(bgGirls);
 						}
 					}
+				case 'tvroom':
+					{
+						defaultCamZoom = 0.9;
+						curStage = 'tvroom';
+						var bg:FlxSprite = new FlxSprite(-500, -300).loadGraphic(Paths.image('cecily/tvroom'));
+						if(FlxG.save.data.antialiasing)
+							{
+								bg.antialiasing = true;
+							}
+						bg.scrollFactor.set(0.9, 0.9);
+						bg.active = false;
+						add(bg);
+
+					}
+				case 'bluescreen':
+					{
+						defaultCamZoom = 0.9;
+						curStage = 'bluescreen';
+						var bg:FlxSprite = new FlxSprite(-500, -300).loadGraphic(Paths.image('cecily/bluescreen'));
+						if(FlxG.save.data.antialiasing)
+							{
+								bg.antialiasing = true;
+							}
+						bg.scrollFactor.set(0.9, 0.9);
+						bg.active = false;
+						add(bg);
+	
+					}
 				case 'schoolEvil':
 					{
 						curStage = 'schoolEvil';
@@ -1003,6 +1037,12 @@ class PlayState extends MusicBeatState
 				dad.x += 150;
 				dad.y += 360;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
+			case 'cecily':
+				dad.x -= 47;
+				dad.y += 131;
+			case 'glitchcily':
+				dad.x -= 47;
+				dad.y += 131;
 			case 'spirit':
 				if (FlxG.save.data.distractions)
 				{
@@ -1020,6 +1060,7 @@ class PlayState extends MusicBeatState
 				dad.x -= 150;
 				dad.y += 100;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
+
 		}
 
 		boyfriend = new Boyfriend(770, 450, SONG.player1);
@@ -1294,6 +1335,12 @@ class PlayState extends MusicBeatState
 					FlxG.sound.play(Paths.sound('ANGRY'));
 					schoolIntro(doof);
 				case 'thorns':
+					schoolIntro(doof);
+				case 'flowers':
+					schoolIntro(doof);
+				case 'bloom':
+					schoolIntro(doof);
+				case 'undefined':
 					schoolIntro(doof);
 				default:
 					startCountdown();

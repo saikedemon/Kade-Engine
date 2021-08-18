@@ -17,3 +17,6 @@ Winter Horrorland:monster-christmas:5
 Senpai:senpai:6
 Roses:senpai:6
 Thorns:spirit:6
+Flowers:cecily:7
+Bloom:cecily:7
+Undefined:glitchcily:7

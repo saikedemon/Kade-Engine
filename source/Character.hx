@@ -381,6 +381,31 @@ class Character extends FlxSprite
 				loadOffsetFile(curCharacter);
 
 				playAnim('idle');
+
+			case 'cecily':
+				tex = Paths.getSparrowAtlas('cecily','shared',true);
+				frames = tex;
+				animation.addByPrefix('idle', 'Cecily idle dance', 24, false);
+				animation.addByPrefix('singUP', 'Cecily Sing Note UP', 24, false);
+				animation.addByPrefix('singRIGHT', 'Cecily Sing Note RIGHT', 24, false);
+				animation.addByPrefix('singDOWN', 'Cecily Sing Note DOWN', 24, false);
+				animation.addByPrefix('singLEFT', 'Cecily Sing Note LEFT', 24, false);
+
+				loadOffsetFile(curCharacter);
+
+				playAnim('idle');
+			case 'glitchcily':
+				tex = Paths.getSparrowAtlas('glitchcily','shared',true);
+				frames = tex;
+				animation.addByPrefix('idle', 'Glitch idle dance', 24, false);
+				animation.addByPrefix('singUP', 'Glitch Sing Note UP', 24, false);
+				animation.addByPrefix('singRIGHT', 'Glitch Sing Note RIGHT', 24, false);
+				animation.addByPrefix('singDOWN', 'Glitch Sing Note DOWN', 24, false);
+				animation.addByPrefix('singLEFT', 'Glitch Sing Note LEFT', 24, false);
+
+				loadOffsetFile(curCharacter);
+	
+				playAnim('idle');
 		}
 
 		dance();
