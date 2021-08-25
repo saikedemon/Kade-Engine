@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="cecily-leek.png">
+	<!-- Created with Adobe Animate version 21.0.0.35450 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Cecily Sing Note DOWN0000" x="0" y="0" width="435" height="447"/>
+	<SubTexture name="Cecily Sing Note DOWN0001" x="0" y="0" width="435" height="447"/>
+	<SubTexture name="Cecily Sing Note DOWN0002" x="435" y="0" width="435" height="447"/>
+	<SubTexture name="Cecily Sing Note DOWN0003" x="435" y="0" width="435" height="447"/>
+	<SubTexture name="Cecily Sing Note DOWN0004" x="435" y="0" width="435" height="447"/>
+	<SubTexture name="Cecily Sing Note DOWN0005" x="435" y="0" width="435" height="447"/>
+	<SubTexture name="Cecily Sing Note DOWN0006" x="435" y="0" width="435" height="447"/>
+	<SubTexture name="Cecily Sing Note DOWN0007" x="435" y="0" width="435" height="447"/>
+	<SubTexture name="Cecily Sing Note DOWN0008" x="435" y="0" width="435" height="447"/>
+	<SubTexture name="Cecily Sing Note DOWN0009" x="435" y="0" width="435" height="447"/>
+	<SubTexture name="Cecily Sing Note DOWN0010" x="435" y="0" width="435" height="447"/>
+	<SubTexture name="Cecily Sing Note DOWN0011" x="435" y="0" width="435" height="447"/>
+	<SubTexture name="Cecily Sing Note DOWN0012" x="435" y="0" width="435" height="447"/>
+	<SubTexture name="Cecily Sing Note DOWN0013" x="435" y="0" width="435" height="447"/>
+	<SubTexture name="Cecily Sing Note DOWN0014" x="435" y="0" width="435" height="447"/>
+	<SubTexture name="Cecily Sing Note DOWN0015" x="435" y="0" width="435" height="447"/>
+	<SubTexture name="Cecily Sing Note DOWN0016" x="435" y="0" width="435" height="447"/>
+	<SubTexture name="Cecily Sing Note DOWN0017" x="435" y="0" width="435" height="447"/>
+	<SubTexture name="Cecily Sing Note DOWN0018" x="435" y="0" width="435" height="447"/>
+	<SubTexture name="Cecily Sing Note DOWN0019" x="435" y="0" width="435" height="447"/>
+	<SubTexture name="Cecily Sing Note DOWN0020" x="435" y="0" width="435" height="447"/>
+	<SubTexture name="Cecily Sing Note DOWN0021" x="435" y="0" width="435" height="447"/>
+	<SubTexture name="Cecily Sing Note LEFT0000" x="870" y="0" width="361" height="614"/>
+	<SubTexture name="Cecily Sing Note LEFT0001" x="870" y="0" width="361" height="614"/>
+	<SubTexture name="Cecily Sing Note LEFT0002" x="1231" y="0" width="361" height="614"/>
+	<SubTexture name="Cecily Sing Note LEFT0003" x="1231" y="0" width="361" height="614"/>
+	<SubTexture name="Cecily Sing Note LEFT0004" x="1231" y="0" width="361" height="614"/>
+	<SubTexture name="Cecily Sing Note LEFT0005" x="1231" y="0" width="361" height="614"/>
+	<SubTexture name="Cecily Sing Note LEFT0006" x="1231" y="0" width="361" height="614"/>
+	<SubTexture name="Cecily Sing Note LEFT0007" x="1231" y="0" width="361" height="614"/>
+	<SubTexture name="Cecily Sing Note LEFT0008" x="1231" y="0" width="361" height="614"/>
+	<SubTexture name="Cecily Sing Note LEFT0009" x="1231" y="0" width="361" height="614"/>
+	<SubTexture name="Cecily Sing Note LEFT0010" x="1231" y="0" width="361" height="614"/>
+	<SubTexture name="Cecily Sing Note LEFT0011" x="1231" y="0" width="361" height="614"/>
+	<SubTexture name="Cecily Sing Note LEFT0012" x="1231" y="0" width="361" height="614"/>
+	<SubTexture name="Cecily Sing Note LEFT0013" x="1231" y="0" width="361" height="614"/>
+	<SubTexture name="Cecily Sing Note LEFT0014" x="1231" y="0" width="361" height="614"/>
+	<SubTexture name="Cecily Sing Note LEFT0015" x="1231" y="0" width="361" height="614"/>
+	<SubTexture name="Cecily Sing Note LEFT0016" x="1231" y="0" width="361" height="614"/>
+	<SubTexture name="Cecily Sing Note LEFT0017" x="1231" y="0" width="361" height="614"/>
+	<SubTexture name="Cecily Sing Note LEFT0018" x="1231" y="0" width="361" height="614"/>
+	<SubTexture name="Cecily Sing Note LEFT0019" x="1231" y="0" width="361" height="614"/>
+	<SubTexture name="Cecily Sing Note LEFT0020" x="1231" y="0" width="361" height="614"/>
+	<SubTexture name="Cecily Sing Note LEFT0021" x="1231" y="0" width="361" height="614"/>
+	<SubTexture name="Cecily Sing Note LEFT0022" x="1231" y="0" width="361" height="614"/>
+	<SubTexture name="Cecily Sing Note RIGHT0000" x="1592" y="0" width="286" height="596"/>
+	<SubTexture name="Cecily Sing Note RIGHT0001" x="1592" y="0" width="286" height="596"/>
+	<SubTexture name="Cecily Sing Note RIGHT0002" x="1878" y="0" width="286" height="596"/>
+	<SubTexture name="Cecily Sing Note RIGHT0003" x="1878" y="0" width="286" height="596"/>
+	<SubTexture name="Cecily Sing Note RIGHT0004" x="1878" y="0" width="286" height="596"/>
+	<SubTexture name="Cecily Sing Note RIGHT0005" x="1878" y="0" width="286" height="596"/>
+	<SubTexture name="Cecily Sing Note RIGHT0006" x="1878" y="0" width="286" height="596"/>
+	<SubTexture name="Cecily Sing Note RIGHT0007" x="1878" y="0" width="286" height="596"/>
+	<SubTexture name="Cecily Sing Note RIGHT0008" x="1878" y="0" width="286" height="596"/>
+	<SubTexture name="Cecily Sing Note RIGHT0009" x="1878" y="0" width="286" height="596"/>
+	<SubTexture name="Cecily Sing Note RIGHT0010" x="1878" y="0" width="286" height="596"/>
+	<SubTexture name="Cecily Sing Note RIGHT0011" x="1878" y="0" width="286" height="596"/>
+	<SubTexture name="Cecily Sing Note RIGHT0012" x="1878" y="0" width="286" height="596"/>
+	<SubTexture name="Cecily Sing Note RIGHT0013" x="1878" y="0" width="286" height="596"/>
+	<SubTexture name="Cecily Sing Note RIGHT0014" x="1878" y="0" width="286" height="596"/>
+	<SubTexture name="Cecily Sing Note RIGHT0015" x="1878" y="0" width="286" height="596"/>
+	<SubTexture name="Cecily Sing Note RIGHT0016" x="1878" y="0" width="286" height="596"/>
+	<SubTexture name="Cecily Sing Note RIGHT0017" x="1878" y="0" width="286" height="596"/>
+	<SubTexture name="Cecily Sing Note RIGHT0018" x="1878" y="0" width="286" height="596"/>
+	<SubTexture name="Cecily Sing Note RIGHT0019" x="1878" y="0" width="286" height="596"/>
+	<SubTexture name="Cecily Sing Note RIGHT0020" x="1878" y="0" width="286" height="596"/>
+	<SubTexture name="Cecily Sing Note RIGHT0021" x="1878" y="0" width="286" height="596"/>
+	<SubTexture name="Cecily Sing Note UP0000" x="2164" y="0" width="306" height="612"/>
+	<SubTexture name="Cecily Sing Note UP0001" x="2164" y="0" width="306" height="612"/>
+	<SubTexture name="Cecily Sing Note UP0002" x="2470" y="0" width="306" height="612"/>
+	<SubTexture name="Cecily Sing Note UP0003" x="2776" y="0" width="306" height="612"/>
+	<SubTexture name="Cecily Sing Note UP0004" x="3082" y="0" width="306" height="612"/>
+	<SubTexture name="Cecily Sing Note UP0005" x="3082" y="0" width="306" height="612"/>
+	<SubTexture name="Cecily Sing Note UP0006" x="3082" y="0" width="306" height="612"/>
+	<SubTexture name="Cecily Sing Note UP0007" x="3082" y="0" width="306" height="612"/>
+	<SubTexture name="Cecily Sing Note UP0008" x="3082" y="0" width="306" height="612"/>
+	<SubTexture name="Cecily Sing Note UP0009" x="3082" y="0" width="306" height="612"/>
+	<SubTexture name="Cecily Sing Note UP0010" x="3082" y="0" width="306" height="612"/>
+	<SubTexture name="Cecily Sing Note UP0011" x="3082" y="0" width="306" height="612"/>
+	<SubTexture name="Cecily Sing Note UP0012" x="3082" y="0" width="306" height="612"/>
+	<SubTexture name="Cecily Sing Note UP0013" x="3082" y="0" width="306" height="612"/>
+	<SubTexture name="Cecily Sing Note UP0014" x="3082" y="0" width="306" height="612"/>
+	<SubTexture name="Cecily Sing Note UP0015" x="3082" y="0" width="306" height="612"/>
+	<SubTexture name="Cecily Sing Note UP0016" x="3082" y="0" width="306" height="612"/>
+	<SubTexture name="Cecily Sing Note UP0017" x="3082" y="0" width="306" height="612"/>
+	<SubTexture name="Cecily Sing Note UP0018" x="3082" y="0" width="306" height="612"/>
+	<SubTexture name="Cecily Sing Note UP0019" x="3082" y="0" width="306" height="612"/>
+	<SubTexture name="Cecily Sing Note UP0020" x="3082" y="0" width="306" height="612"/>
+	<SubTexture name="Cecily Sing Note UP0021" x="3082" y="0" width="306" height="612"/>
+	<SubTexture name="Cecily idle dance0000" x="3388" y="0" width="332" height="627"/>
+	<SubTexture name="Cecily idle dance0001" x="3388" y="0" width="332" height="627"/>
+	<SubTexture name="Cecily idle dance0002" x="3720" y="0" width="332" height="627"/>
+	<SubTexture name="Cecily idle dance0003" x="0" y="627" width="332" height="627"/>
+	<SubTexture name="Cecily idle dance0004" x="332" y="627" width="332" height="627"/>
+	<SubTexture name="Cecily idle dance0005" x="332" y="627" width="332" height="627"/>
+	<SubTexture name="Cecily idle dance0006" x="664" y="627" width="332" height="627"/>
+	<SubTexture name="Cecily idle dance0007" x="664" y="627" width="332" height="627"/>
+	<SubTexture name="Cecily idle dance0008" x="664" y="627" width="332" height="627"/>
+	<SubTexture name="Cecily idle dance0009" x="664" y="627" width="332" height="627"/>
+	<SubTexture name="Cecily idle dance0010" x="664" y="627" width="332" height="627"/>
+	<SubTexture name="Cecily idle dance0011" x="996" y="627" width="332" height="627"/>
+	<SubTexture name="Cecily idle dance0012" x="996" y="627" width="332" height="627"/>
+	<SubTexture name="Cecily idle dance0013" x="1328" y="627" width="332" height="627"/>
+	<SubTexture name="Cecily idle dance0014" x="1660" y="627" width="332" height="627"/>
+	<SubTexture name="Cecily idle dance0015" x="1660" y="627" width="332" height="627"/>
+	<SubTexture name="Cecily idle dance0016" x="1992" y="627" width="332" height="627"/>
+	<SubTexture name="Cecily idle dance0017" x="2324" y="627" width="332" height="627"/>
+	<SubTexture name="Cecily idle dance0018" x="2656" y="627" width="332" height="627"/>
+	<SubTexture name="Cecily idle dance0019" x="2988" y="627" width="332" height="627"/>
+	<SubTexture name="Cecily idle dance0020" x="3320" y="627" width="332" height="627"/>
+	<SubTexture name="Cecily idle dance0021" x="3320" y="627" width="332" height="627"/>
+	<SubTexture name="Cecily idle dance0022" x="3320" y="627" width="332" height="627"/>
+	<SubTexture name="Cecily idle dance0023" x="3320" y="627" width="332" height="627"/>
+	<SubTexture name="Cecily idle dance0024" x="3652" y="627" width="332" height="627"/>
+	<SubTexture name="Cecily idle dance0025" x="0" y="1254" width="332" height="627"/>
+	<SubTexture name="Cecily idle dance0026" x="332" y="1254" width="332" height="627"/>
+	<SubTexture name="Cecily idle dance0027" x="332" y="1254" width="332" height="627"/>
+</TextureAtlas>

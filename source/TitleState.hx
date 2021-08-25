@@ -121,7 +121,7 @@ class TitleState extends MusicBeatState
 	{
 		persistentUpdate = true;
 
-		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
+		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image("titlebg"));
 		// bg.antialiasing = true;
 		// bg.setGraphicSize(Std.int(bg.width * 0.6));
 		// bg.updateHitbox();
@@ -301,7 +301,15 @@ class TitleState extends MusicBeatState
 
 			MainMenuState.firstStart = true;
 			MainMenuState.finishedFunnyMove = false;
-			FlxG.switchState(new MainMenuState());
+
+			new FlxTimer().start(2, function(tmr:FlxTimer)
+			{
+				#if desktop
+				FlxG.switchState(new MainMenuState());
+				#else
+				FlxG.switchState(new BootlegScreen());
+				#end
+			});
 			// FlxG.sound.play(Paths.music('titleShoot'), 0.7);
 		}
 

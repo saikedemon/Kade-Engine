@@ -87,7 +87,7 @@ class MainMenuState extends MusicBeatState
 			{
 				magenta.antialiasing = true;
 			}
-		magenta.color = 0xFFfd719b;
+		magenta.color = 0xFFffffff;
 		add(magenta);
 		// magenta.scrollFactor.set();
 

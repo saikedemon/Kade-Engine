@@ -1,4 +1,3 @@
-:dad:Wow, you're good at this game!
-:dad:Ok, ok, I wanna try something harder now.
-:dad:Don't worry though, I'll help you out!
-:dad:When I say "go", you'll start singing, ok?
+:cecilyneutral:Wow, you really are good with that thing!
+:cecilyneutral:Ok, I wanna sing a harder song now.
+:cecilyneutral:You may get a bit overwhelmed, so just wait until I say go before you sing, okay?

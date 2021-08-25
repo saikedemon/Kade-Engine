@@ -385,27 +385,67 @@ class Character extends FlxSprite
 			case 'cecily':
 				tex = Paths.getSparrowAtlas('cecily','shared',true);
 				frames = tex;
-				animation.addByPrefix('idle', 'Cecily idle dance', 24, false);
 				animation.addByPrefix('singUP', 'Cecily Sing Note UP', 24, false);
 				animation.addByPrefix('singRIGHT', 'Cecily Sing Note RIGHT', 24, false);
 				animation.addByPrefix('singDOWN', 'Cecily Sing Note DOWN', 24, false);
 				animation.addByPrefix('singLEFT', 'Cecily Sing Note LEFT', 24, false);
 
+				animation.addByPrefix('singUP-alt', 'Cecily Sing Note UP', 24, false);
+				animation.addByPrefix('singDOWN-alt', 'Cecily Sing Note DOWN', 24, false);
+				animation.addByPrefix('singLEFT-alt', 'Cecily Sing Note LEFT', 24, false);
+				animation.addByPrefix('singRIGHT-alt', 'Cecily Sing Note RIGHT', 24, false);
+
+				animation.addByIndices('danceLeft', 'Cecily idle dance', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], "", 24, false);
+				animation.addByIndices('danceRight', 'Cecily idle dance', [14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27], "", 24, false);
+	
 				loadOffsetFile(curCharacter);
 
-				playAnim('idle');
+				playAnim('danceRight');
+
+			case 'cecily-sad':
+				tex = Paths.getSparrowAtlas('cecily_sad','shared',true);
+				frames = tex;
+				animation.addByPrefix('singUP', 'Cecily Sing Note UP', 24, false);
+				animation.addByPrefix('singRIGHT', 'Cecily Sing Note RIGHT', 24, false);
+				animation.addByPrefix('singDOWN', 'Cecily Sing Note DOWN', 24, false);
+				animation.addByPrefix('singLEFT', 'Cecily Sing Note LEFT', 24, false);
+
+				animation.addByIndices('danceLeft', 'Cecily idle dance', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], "", 24, false);
+				animation.addByIndices('danceRight', 'Cecily idle dance', [14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27], "", 24, false);
+	
+				loadOffsetFile(curCharacter);
+
+				playAnim('danceRight');
+
+			case 'cecily-leek':
+				tex = Paths.getSparrowAtlas('cecily-leek','shared',true);
+				frames = tex;
+				animation.addByPrefix('singUP', 'Cecily Sing Note UP', 24, false);
+				animation.addByPrefix('singRIGHT', 'Cecily Sing Note RIGHT', 24, false);
+				animation.addByPrefix('singDOWN', 'Cecily Sing Note DOWN', 24, false);
+				animation.addByPrefix('singLEFT', 'Cecily Sing Note LEFT', 24, false);
+
+				animation.addByIndices('danceLeft', 'Cecily idle dance', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], "", 24, false);
+				animation.addByIndices('danceRight', 'Cecily idle dance', [14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27], "", 24, false);
+	
+				loadOffsetFile(curCharacter);
+
+				playAnim('danceRight');
+
 			case 'glitchcily':
 				tex = Paths.getSparrowAtlas('glitchcily','shared',true);
 				frames = tex;
-				animation.addByPrefix('idle', 'Glitch idle dance', 24, false);
 				animation.addByPrefix('singUP', 'Glitch Sing Note UP', 24, false);
 				animation.addByPrefix('singRIGHT', 'Glitch Sing Note RIGHT', 24, false);
 				animation.addByPrefix('singDOWN', 'Glitch Sing Note DOWN', 24, false);
 				animation.addByPrefix('singLEFT', 'Glitch Sing Note LEFT', 24, false);
 
-				loadOffsetFile(curCharacter);
+				animation.addByIndices('danceLeft', 'Glitch idle dance', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], "", 24, false);
+				animation.addByIndices('danceRight', 'Glitch idle dance', [14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27], "", 24, false);
 	
-				playAnim('idle');
+				loadOffsetFile(curCharacter);
+
+				playAnim('danceRight');
 		}
 
 		dance();
@@ -497,6 +537,13 @@ class Character extends FlxSprite
 							playAnim('danceLeft');
 					}
 				case 'spooky':
+					danced = !danced;
+
+					if (danced)
+						playAnim('danceRight');
+					else
+						playAnim('danceLeft');
+				case 'cecily' | 'cecily-sad' | 'cecily-leek' | 'glitchcily':
 					danced = !danced;
 
 					if (danced)

@@ -482,8 +482,10 @@ class PlayState extends MusicBeatState
 				dialogue = CoolUtil.coolTextFile(Paths.txt('data/flowers/dialogue'));
 			case 'bloom':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('data/bloom/dialogue'));
-			case 'undefined':
-				dialogue = CoolUtil.coolTextFile(Paths.txt('data/undefined/dialogue'));
+			case 'lone':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('data/lone/dialogue'));
+			case 'reconcile':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('data/reconcile/dialogue'));
 		}
 
 		// defaults if no stage was found in chart
@@ -854,6 +856,20 @@ class PlayState extends MusicBeatState
 						add(bg);
 
 					}
+				case 'leek':
+					{
+						defaultCamZoom = 0.9;
+						curStage = 'leek';
+						var bg:FlxSprite = new FlxSprite(-500, -300).loadGraphic(Paths.image('cecily/leek'));
+						if(FlxG.save.data.antialiasing)
+							{
+								bg.antialiasing = true;
+							}
+						bg.scrollFactor.set(0.9, 0.9);
+						bg.active = false;
+						add(bg);
+
+					}
 				case 'bluescreen':
 					{
 						defaultCamZoom = 0.9;
@@ -1038,11 +1054,17 @@ class PlayState extends MusicBeatState
 				dad.y += 360;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 			case 'cecily':
-				dad.x -= 47;
-				dad.y += 131;
+				dad.x -= 22;
+				dad.y += 138;
+			case 'cecily-sad':
+				dad.x -= 22;
+				dad.y += 138;
+			case 'cecily-leek':
+				dad.x -= 22;
+				dad.y += 138;
 			case 'glitchcily':
-				dad.x -= 47;
-				dad.y += 131;
+				dad.x -= 22;
+				dad.y += 138;
 			case 'spirit':
 				if (FlxG.save.data.distractions)
 				{
@@ -1340,7 +1362,9 @@ class PlayState extends MusicBeatState
 					schoolIntro(doof);
 				case 'bloom':
 					schoolIntro(doof);
-				case 'undefined':
+				case 'lone':
+					schoolIntro(doof);
+				case 'reconcile':
 					schoolIntro(doof);
 				default:
 					startCountdown();
@@ -4526,7 +4550,7 @@ class PlayState extends MusicBeatState
 
 			// Dad doesnt interupt his own notes
 			if ((SONG.notes[Math.floor(curStep / 16)].mustHitSection || !dad.animation.curAnim.name.startsWith("sing")) && dad.curCharacter != 'gf')
-				if ((curBeat % idleBeat == 0 || !idleToBeat) || dad.curCharacter == "spooky")
+				if ((curBeat % idleBeat == 0 || !idleToBeat) || dad.curCharacter == "spooky" || dad.curCharacter == "cecily" || dad.curCharacter == "cecily-sad" || dad.curCharacter == "cecily-leek" || dad.curCharacter == "glitchcily")
 					dad.dance(idleToBeat);
 		}
 		// FlxG.log.add('change bpm' + SONG.notes[Std.int(curStep / 16)].changeBPM);

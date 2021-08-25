@@ -30,6 +30,8 @@ class DialogueBox extends FlxSpriteGroup
 
 	var portraitLeft:FlxSprite;
 	var portraitRight:FlxSprite;
+	var CECILY_NEUTRAL:FlxSprite;
+	var CECILY_SAD:FlxSprite;
 
 	var handSelect:FlxSprite;
 	var bgFade:FlxSprite;
@@ -107,7 +109,17 @@ class DialogueBox extends FlxSpriteGroup
 				box.height = 200;
 				box.x = -100;
 				box.y = 375;
-			case 'undefined':
+			case 'lone':
+				hasDialog = true;
+				box.frames = Paths.getSparrowAtlas('speech_bubble_talking', 'shared');
+				box.animation.addByPrefix('normalOpen', 'Speech Bubble Normal Open', 24, false);
+				box.animation.addByIndices('normal', 'speech bubble normal', [4], "", 24);
+				box.width = 200;
+				box.height = 200;
+				box.x = -100;
+				box.y = 375;
+
+			case 'reconcile':
 				hasDialog = true;
 				box.frames = Paths.getSparrowAtlas('speech_bubble_talking', 'shared');
 				box.animation.addByPrefix('normalOpen', 'Speech Bubble Normal Open', 24, false);
@@ -135,16 +147,34 @@ class DialogueBox extends FlxSpriteGroup
 			portraitLeft.visible = false;
 
 		}
-		else if (PlayState.SONG.song.toLowerCase()=='flowers' || PlayState.SONG.song.toLowerCase()=='bloom' || PlayState.SONG.song.toLowerCase()=='undefined')
+		else if (PlayState.SONG.song.toLowerCase()=='flowers' || PlayState.SONG.song.toLowerCase()=='bloom' || PlayState.SONG.song.toLowerCase()=='lone' || PlayState.SONG.song.toLowerCase()=='reconcile')
 		{
 			portraitLeft = new FlxSprite(-1500, 40);
 			portraitLeft.frames = Paths.getSparrowAtlas('portraits/cecily', 'shared');
-			portraitLeft.animation.addByPrefix('enter', 'Portrait Enter instance 1', 24, false);
-			portraitLeft.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 0.175));
+			portraitLeft.animation.addByPrefix('enter', 'Neutral Enter', 24, false);
+			portraitLeft.setGraphicSize(Std.int(portraitLeft.width * 0.35));
 			portraitLeft.updateHitbox();
 			portraitLeft.scrollFactor.set();
 			add(portraitLeft);
 			portraitLeft.visible = false;
+
+			CECILY_NEUTRAL = new FlxSprite(150, 85);
+			CECILY_NEUTRAL.frames = Paths.getSparrowAtlas('portraits/cecily', 'shared');
+			CECILY_NEUTRAL.animation.addByPrefix('enter', 'Neutral Enter', 24, false);
+			CECILY_NEUTRAL.setGraphicSize(Std.int(CECILY_NEUTRAL.width * 0.60));
+			CECILY_NEUTRAL.updateHitbox();
+			CECILY_NEUTRAL.scrollFactor.set();
+			add(CECILY_NEUTRAL);
+			CECILY_NEUTRAL.visible = false;
+
+			CECILY_SAD = new FlxSprite(150, 85);
+			CECILY_SAD.frames = Paths.getSparrowAtlas('portraits/cecily', 'shared');
+			CECILY_SAD.animation.addByPrefix('enter', 'Sad Enter', 24, false);
+			CECILY_SAD.setGraphicSize(Std.int(CECILY_SAD.width * 0.60));
+			CECILY_SAD.updateHitbox();
+			CECILY_SAD.scrollFactor.set();
+			add(CECILY_SAD);
+			CECILY_SAD.visible = false;
 		}
 
 
@@ -174,20 +204,41 @@ class DialogueBox extends FlxSpriteGroup
 			// box.flipX = true;
 		}
 
-		dropText = new FlxText(242, 502, Std.int(FlxG.width * 0.6), "", 32);
-		dropText.font = 'Pixel Arial 11 Bold';
-		dropText.color = 0xFFD89494;
-		add(dropText);
+		if (PlayState.SONG.song.toLowerCase()=='senpai' || PlayState.SONG.song.toLowerCase()=='roses' || PlayState.SONG.song.toLowerCase()=='thorns')
+		{
+			dropText = new FlxText(242, 502, Std.int(FlxG.width * 0.6), "", 32);
+			dropText.font = 'Pixel Arial 11 Bold';
+			dropText.color = 0xFFD89494;
+			add(dropText);
 
-		swagDialogue = new FlxTypeText(240, 500, Std.int(FlxG.width * 0.6), "", 32);
-		swagDialogue.font = 'Pixel Arial 11 Bold';
-		swagDialogue.color = 0xFF3F2021;
-		swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.6)];
-		add(swagDialogue);
+			swagDialogue = new FlxTypeText(240, 500, Std.int(FlxG.width * 0.6), "", 32);
+			swagDialogue.font = 'Pixel Arial 11 Bold';
+			swagDialogue.color = 0xFF3F2021;
+			swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.6)];
+			add(swagDialogue);
 
-		dialogue = new Alphabet(0, 80, "", false, true);
-		// dialogue.x = 90;
-		// add(dialogue);
+			dialogue = new Alphabet(0, 80, "", false, true);
+			// dialogue.x = 90;
+			// add(dialogue);
+		}
+
+		else if (PlayState.SONG.song.toLowerCase()=='flowers' || PlayState.SONG.song.toLowerCase()=='bloom' || PlayState.SONG.song.toLowerCase()=='lone' || PlayState.SONG.song.toLowerCase()=='reconcile')
+		{
+			dropText = new FlxText(240, 500, Std.int(FlxG.width * 0.6), "", 32);
+			dropText.font = 'Arial';
+			dropText.color = 0x00000000;
+			add(dropText);
+	
+			swagDialogue = new FlxTypeText(240, 500, Std.int(FlxG.width * 0.6), "", 32);
+			swagDialogue.font = 'Arial';
+			swagDialogue.color = 0xFF000000;
+			swagDialogue.sounds = [FlxG.sound.load(Paths.sound('CecilySpeak'), 0.6)];
+			add(swagDialogue);
+	
+			dialogue = new Alphabet(0, 80, "", false, true);
+			// dialogue.x = 90;
+			// add(dialogue);
+		}
 	}
 
 	var dialogueOpened:Bool = false;
@@ -280,6 +331,8 @@ class DialogueBox extends FlxSpriteGroup
 		switch (curCharacter)
 		{
 			case 'dad':
+				CECILY_NEUTRAL.visible = false;
+				CECILY_SAD.visible = false;
 				portraitRight.visible = false;
 				if (!portraitLeft.visible)
 				{
@@ -287,11 +340,31 @@ class DialogueBox extends FlxSpriteGroup
 					portraitLeft.animation.play('enter');
 				}
 			case 'bf':
+				CECILY_NEUTRAL.visible = false;
+				CECILY_SAD.visible = false;
 				portraitLeft.visible = false;
 				if (!portraitRight.visible)
 				{
 					portraitRight.visible = true;
 					portraitRight.animation.play('enter');
+				}
+			case 'cecilyneutral':
+				CECILY_SAD.visible = false;
+				portraitRight.visible = false;
+				portraitLeft.visible = false;
+				if (!CECILY_NEUTRAL.visible)
+				{
+					CECILY_NEUTRAL.visible = true;
+					CECILY_NEUTRAL.animation.play('enter');
+				}
+			case 'cecilysad':
+				CECILY_NEUTRAL.visible = false;
+				portraitRight.visible = false;
+				portraitLeft.visible = false;
+				if (!CECILY_SAD.visible)
+				{
+					CECILY_SAD.visible = true;
+					CECILY_SAD.animation.play('enter');
 				}
 		}
 	}
